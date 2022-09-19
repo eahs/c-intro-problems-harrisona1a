@@ -45,18 +45,61 @@ namespace VowelShifter
                 // Let's grab one character from the input at index i
                 char current = input[i];
                 
-                // Turn any 'e' to a '3'
-                if (current == 'e')
+                if (current.ToString().ToLower() == 'a'.ToString())
                 {
-                    current = '3';
+                    if (current == 'a')
+                    {
+                        current = 'e';
+                    }
+                    else
+                    {
+                        current = 'E';
+                    }
                 }
-                
-                // Make every other letter uppercase
-                if (i % 2 == 0)
+                else if (current.ToString().ToLower() == 'e'.ToString())
                 {
-                    current = Char.ToUpper(current);
+                    if (current == 'e')
+                    {
+                        current = 'i';
+                    }
+                    else
+                    {
+                        current = 'I';
+                    }
                 }
-                
+                else if (current.ToString().ToLower() == 'i'.ToString())
+                {
+                    if (current == 'i')
+                    {
+                        current = 'o';
+                    }
+                    else
+                    {
+                        current = 'O';
+                    }
+                }
+                else if (current.ToString().ToLower() == 'o'.ToString())
+                {
+                    if (current == 'o')
+                    {
+                        current = 'u';
+                    }
+                    else
+                    {
+                        current = 'U';
+                    }
+                }
+                else if (current.ToString().ToLower() == 'u'.ToString())
+                {
+                    if (current == 'u')
+                    {
+                        current = 'a';
+                    }
+                    else
+                    {
+                        current = 'A';
+                    }
+                }
                 output += current;
             }
             
